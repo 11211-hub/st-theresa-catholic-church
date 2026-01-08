@@ -97,7 +97,13 @@ margin-top: 100px;
 
     <!-- hero
     ================================================== -->
-    <section class="s-hero" data-parallax="scroll" data-image-src="images/ai-church.png" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+    <section class="s-hero"
+  data-parallax="scroll"
+  data-image-src="images/ai-church.png"
+  data-natural-width="3000"
+  data-natural-height="2000"
+  data-position-y="center">
+
 
         <div class="hero-left-bar"></div>
 
@@ -136,6 +142,30 @@ margin-top: 100px;
                 Scroll For More
             </a>
         </div> <!-- end hero-scroll -->
+<style>
+    /* HERO BACKGROUND FALLBACK FOR MOBILE */
+.s-hero {
+    background-image: url("images/ai-church.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+/* Optional: disable parallax on mobile explicitly */
+@media (max-width: 768px) {
+    .s-hero {
+        background-attachment: scroll;
+    }
+}
+
+</style>
+
+<script>
+  if (window.innerWidth > 768) {
+    $('.s-hero').parallax();
+  }
+</script>
 
     </section> <!-- end s-hero -->
 
@@ -534,7 +564,7 @@ You are warmly welcome to worship with us.
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
 
- 
+
 
      
 
